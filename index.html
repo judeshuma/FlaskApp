@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Chordo</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="text-center">Chordo</h1>
+<h5 class="text-center">A Random Chord Progression Generator</h5><br>
+
+
+<form class="text-center" action="{{url_for('calculate')}}" method = 'POST'>
+    Choose a Key Signature
+    <select id="selectkey" name="keysig">
+        <option value="C Major">C Major</option>
+        <option value="D Major">D Major</option>
+        <option value="E Major">E Major</option>
+        <option value="F Major">F Major</option>
+        <option value="G Major">G Major</option>
+        <option value="A Major">A Major</option>
+        <option value="B Major">B Major</option>
+    </select><br>
+    How Many Chords
+    <select id="selectnum" name="numchords">
+        <option value=""> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select><br><br>
+    <button type="submit" value="calculate">Click For Chords</button>
+    <div class="row mt-3">
+        <input class="text-center" value="{{final_list}}"
+    </div>
+</form>
+
+{% endblock %}

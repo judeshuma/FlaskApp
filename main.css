@@ -1,0 +1,47 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+$primary: black;
+
+$dark: black;
+
+/* Global Settings  ------------------------------------ ------------------------------------   */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+img {
+    height: 65px;
+    width: 65px;
+}
+.navbar-nav {
+    display: flex;
+    margin-left: 5px;
+    letter-spacing: 7px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-link a:active {
+    background-color: rgb(0, 0, 0);
+    color:#fe7c7c;
+}
+.navbar-nav a:hover {
+    color:#ff8282;
+    background-color: #000000;
+}
+h1 {
+    margin-top: 100px;
+    font-family: Archivo Black;
+    letter-spacing: 1px;
+    margin-right: -1px;
+}
+input {
+    border: none;
+}
