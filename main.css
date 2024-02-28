@@ -17,10 +17,6 @@ body {
     font-family: sans-serif;
     
 }
-img {
-    height: 65px;
-    width: 65px;
-}
 .navbar-nav {
     display: flex;
     margin-left: 5px;
