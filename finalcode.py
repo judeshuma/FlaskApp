@@ -134,37 +134,13 @@ def calculate():
             final_list.append(num)
             finale = str(final_list)
         return render_template('index.html', final_list=final_list)
-    elif selection == "C Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "C# Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "D Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Eb Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "E Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "F Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "F# Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "G Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Ab Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "A Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Bb Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "B Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
     else:
         return "Sorry Please Try That Again"        
 
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
 
 
 #create a global variable for my keysig selection
