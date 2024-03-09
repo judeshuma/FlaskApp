@@ -18,7 +18,7 @@ def calculate():
     values_F = ["F", "Gm", "Am", "Bb", "C", "Dm", "Eb"]
     values_F1 = ["F#", "G#m", "A#m", "B", "C#", "D#m", "E"]
     values_G = ["G", "Am", "Bm", "C", "D", "Em", "F"]
-    values_Ab = ["Ab", "Bbm", "Cm", "Db", "Eb", "Fm", "F#"]
+    values_Ab = ["Ab", "Bbm", "Cm", "Db", "Eb", "Fm", "Gb"]
     values_A = ["A", "Bm", "C#m", "D", "E", "F#m", "G"]
     values_Bb = ["Bb", "Cm", "Dm", "Eb", "F", "Gm", "Ab"]
     values_B = ["B", "C#m", "D#m", "E", "F#", "G#m", "A"]
