@@ -9,6 +9,7 @@ def index():
     return render_template('index.html')
 
 @app.route("/calculate", methods = ['GET','POST'])
+
 def calculate():
     values_C = ["C", "Dm", "Em", "F", "G", "Am", "Bb"]
     values_C1 = ["C#", "D#m", "Fm", "F#", "G#", "A#", "B"]
@@ -22,149 +23,47 @@ def calculate():
     values_A = ["A", "Bm", "C#m", "D", "E", "F#m", "G"]
     values_Bb = ["Bb", "Cm", "Dm", "Eb", "F", "Gm", "Ab"]
     values_B = ["B", "C#m", "D#m", "E", "F#", "G#m", "A"]
+
     selection = request.form.get('keysig')
     numselection = request.form.get('numchords')
     numselection1 = int(numselection)
     final_list = []
+
     if selection == "C Major":
-        for i in range(0,numselection1):
-            selection1 = values_C
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_C
     elif selection == "C# Major":
-        for i in range(0,numselection1):
-            selection1 = values_C1
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_C1
     elif selection == "D Major":
-        for i in range(0,numselection1):
-            selection1 = values_D
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_D
     elif selection == "Eb Major":
-        for i in range(0,numselection1):
-            selection1 = values_Eb
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_Eb
     elif selection == "E Major":
-        for i in range(0,numselection1):
-            selection1 = values_E
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_E
     elif selection == "F Major":
-        for i in range(0,numselection1):
-            selection1 = values_F
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_F
     elif selection == "F# Major":
-        for i in range(0,numselection1):
-            selection1 = values_F1
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_F1
     elif selection == "G Major":
-        for i in range(0,numselection1):
-            selection1 = values_G
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_G
     elif selection == "Ab Major":
-        for i in range(0,numselection1):
-            selection1 = values_Ab
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_Ab
     elif selection == "A Major":
-        for i in range(0,numselection1):
-            selection1 = values_A
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_A
     elif selection == "Bb Major":
-        for i in range(0,numselection1):
-            selection1 = values_Bb
-            num = random.choice(selection1)
-            chord = selection1.remove(num)
-            numselection1 = numselection1 -1
-            final_list.append(num)
-            finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
+        chords = values_Bb
     elif selection == "B Major":
-        for i in range(0,numselection1):
-            selection1 = values_B
+        chords = values_B
+
+    for i in range(0,numselection1):
+            selection1 = chords
             num = random.choice(selection1)
             chord = selection1.remove(num)
             numselection1 = numselection1 -1
             final_list.append(num)
             finale = str(final_list)
-        return render_template('index.html', final_list=final_list)
-    elif selection == "C Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "C# Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "D Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Eb Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "E Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "F Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "F# Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "G Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Ab Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "A Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "Bb Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    elif selection == "B Major" and numselection1 == '0':
-        return render_template('index.html', final_list="Please Try Again")
-    else:
-        return "Sorry Please Try That Again"        
-
-
-
+    return render_template('index.html', final_list=final_list)
+      
 if __name__ == "__main__":
     app.run(debug=False)
 
 
-#create a global variable for my keysig selection
